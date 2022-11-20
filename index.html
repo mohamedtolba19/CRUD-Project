@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Project</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="fw-bolder py-4 ">Product Management System</h1>
+
+        <div>
+<ul id="errorList">
+    <li class="alert-danger d-none  mb-2 p-3" id="nameError"></li>
+    <li class="alert-danger d-none  mb-2 p-3" id = "priceError"></li>
+    <li class="alert-danger d-none  mb-2 p-3" id = "categoryError"></li>
+    <li class="alert-danger d-none  mb-2 p-3" id="descError"></li>
+
+</ul>
+        </div>
+
+        <label for="productNameInput" >Product Name : </label>
+        <input  oninput="validateName()" type="text" id="productNameInput" class="form-control mb-3 ">
+
+        <label for="productPriceInput">Product Price : </label>
+        <input oninput="validatePrice()" type="number" id="productPriceInput" class="form-control mb-3">
+
+        <label for="productCategoryInput">Product Category: </label>
+        <input oninput="validateCategory()" type="text" id="productCategoryInput" class="form-control mb-3">
+
+        <label for="productDescInput">Product Desc: </label>
+        <textarea placeholder="" oninput="validateDesc()" type="text" id="productDescInput" class="form-control mb-3"> </textarea>
+
+        <button id = "addBtn" onclick=" addProduct(); " class=" btn btn-outline-info text-info">Add Product</button>
+        <button id = "ubdateBtn" onclick=" ubdate(); "   class=" btn d-none btn-outline-primary text-primary">ubdate</button>
+<div class="p-4 ">
+<label for="search"> </label>
+    <input oninput="searchProducts(this.value)" type="text" placeholder="search by name" id = "search" class=" search form-control">
+</div>
+
+
+
+
+        <table class="table mt-2 ">
+            <thead>
+                <th>index</th>
+                <th>productName</th>
+                <th>productPrice</th>
+                <th>productCategory</th>
+                <th>productDesc</th>
+                <th>ubdate</th>
+                <th>delete</th>
+                
+            </thead>
+            <tbody id = 'tableBody'>
+             
+            </tbody>
+        </table>
+
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

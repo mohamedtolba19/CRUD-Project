@@ -1,0 +1,28 @@
+.btn:hover
+{
+    color: white !important;
+}
+label
+{
+    font-size: 18px;
+}
+#errorList  li 
+{
+    border: 1px solid white !important;
+    border-radius: 20px !important;
+    width: 75%;
+    font-size: 18px;
+    font-weight: 600;
+    
+  
+}
+
+::placeholder { 
+    color: red !important ;
+   
+  }
+.search::placeholder
+{
+    color: gray !important;
+}
+ 
